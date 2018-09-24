@@ -83,7 +83,7 @@ public class Box<T extends Fruit> {
     }
 
     public boolean compare(Box<?> anotherBox) {
-        return weight == anotherBox.getWeight();
+        return Math.abs(weight - anotherBox.getWeight()) < 0.000001;
     }
 
     public String getName() {

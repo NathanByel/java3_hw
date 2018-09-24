@@ -71,9 +71,14 @@ public class Main {
     }
 
     private static <T> ArrayList<T> toList(T[] array) {
-        return new ArrayList<>( Arrays.asList(array) );
+        return (ArrayList<T>) Arrays.asList(array);
     }
 
+    /* Вариант
+    private static <T> List<T> toList(T[] array) {
+        return Arrays.asList(array);
+    }
+    */
 
     private static void task3() {
         System.out.println("Task 3");
