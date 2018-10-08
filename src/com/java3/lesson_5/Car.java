@@ -37,7 +37,7 @@ public class Car implements Runnable {
         }
 
         race.carFinishTheRace();
-
+        System.out.println(this.name + " ЗАКОНЧИЛ ГОНКУ!");
         if(race.carIsWinner()) {
             System.out.println(this.name + " WIN !");
         }

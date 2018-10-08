@@ -16,7 +16,7 @@ public class Race {
         this.totalCars = totalCars;
         startLine = new CountDownLatch(totalCars);
         finishLine = new CountDownLatch(totalCars);
-        startLights = new CountDownLatch(3);
+        startLights = new CountDownLatch(1);
     }
 
     public ArrayList<Stage> getStages() {
@@ -35,19 +35,7 @@ public class Race {
     }
 
     public void start() {
-        try {
-            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> На старт!!!");
-            startLights.countDown();
-            Thread.sleep(1000);
-
-            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Внимание!!!");
-            startLights.countDown();
-            Thread.sleep(1000);
-
-            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
-            startLights.countDown();
-        } catch (InterruptedException e) {
-        }
+        startLights.countDown();
     }
 
     public void carFinishTheRace() {

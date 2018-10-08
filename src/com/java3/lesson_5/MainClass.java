@@ -16,6 +16,14 @@ public class MainClass {
         }
 
         race.awaitAllCars();
+        try {
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> На старт!!!");
+            Thread.sleep(1000);
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Внимание!!!");
+            Thread.sleep(1000);
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
+        } catch (InterruptedException e) {
+        }
         race.start();
 
         race.awaitAllFinish();
