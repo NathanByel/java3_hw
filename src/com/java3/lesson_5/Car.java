@@ -32,9 +32,7 @@ public class Car implements Runnable {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < race.getStages().size(); i++) {
-            race.getStages().get(i).go(this);
-        }
+        race.getStages().forEach(stage -> stage.go(this));
 
         race.carFinishTheRace();
         System.out.println(this.name + " ЗАКОНЧИЛ ГОНКУ!");

@@ -2,6 +2,7 @@ package com.java3.lesson_5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 public class Race {
@@ -19,7 +20,7 @@ public class Race {
         startLights = new CountDownLatch(1);
     }
 
-    public ArrayList<Stage> getStages() {
+    public List<Stage> getStages() {
         return stages;
     }
 
